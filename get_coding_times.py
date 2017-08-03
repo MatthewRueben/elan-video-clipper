@@ -34,15 +34,31 @@ if __name__ == "__main__":
     with open(path) as f:
         reader = csv.reader(f, delimiter = '\t')
         codings_all = list(reader)
-
+        
     # Find all codings of a certain tier
     tier_chosen = raw_input('Which tier? Type the name as is it is ELAN: ')
     print '...'
-    codings_chosen = [coding for coding in codings_all
-                      if coding[0] == tier_chosen]
-    print 'Found ' + str(len(codings_chosen)) + ' codings with tier name ' + tier_chosen
+    codings_by_tier = [coding for coding in codings_all
+                       if coding[0] == tier_chosen]
+    print 'Found ' + str(len(codings_by_tier)) + ' codings with tier name ' + tier_chosen
 
-    for coding in codings_chosen:
-        print [coding[i] for i in [0,2,5]]  # this is clunky with python lists
+    # Find all codings of a certain level
+    level_chosen = raw_input('Which level of that tier? Type the name as is it is ELAN, or press RETURN to get all levels: ')
+    print '...'
+    if level_chosen == '':  # if they just pressed RETURN...
+        codings_by_level = codings_by_tier  # ...give them all codings in that tier.
+        print 'OK, here are all the codings for that tier name.'
+    else:
+        codings_by_level = [coding for coding in codings_by_tier
+                            if coding[-1] == level_chosen]
+        print 'Found ' + str(len(codings_by_level)) + ' codings with level ' + level_chosen
+
+    # Print out all the codings that have been selected.
+    print '---- Beginning of selected codings ----'
+    for coding in codings_by_level:
+        print [coding[i] for i in [0,2,5,-1]]  # this is clunky with python lists
+    print '---- End of selected codings ----'
+
+    # Ask if user wants to make video clips out of these. 
+
     
-

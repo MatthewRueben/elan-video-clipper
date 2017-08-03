@@ -4,6 +4,7 @@ ELAN file parsing
 1. (DONE) Script can get entry for each coding in a hard-coded tier.
 2. (DONE) Can pull out just the start and end times for each coding.
 3. (DONE) The tier name can now be user-specified.
+G. (to do) Can get certain levels of a tier.
 
 Video clipping stuff
 4. (to do) Can make a clip of a video from the command line.
