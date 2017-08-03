@@ -1,9 +1,9 @@
 Goal: automatically extract the time-spans for all codings in a certain tier of an ELAN output, then makes a video clip for each of those.
 
 ELAN file parsing
-1. (to do) Script can get entry for each coding in a hard-coded tier.
-2. (to do) Can pull out just the start and end times for each coding.
-3. (to do) The tier name can now be user-specified.
+1. (DONE) Script can get entry for each coding in a hard-coded tier.
+2. (DONE) Can pull out just the start and end times for each coding.
+3. (DONE) The tier name can now be user-specified.
 
 Video clipping stuff
 4. (to do) Can make a clip of a video from the command line.
