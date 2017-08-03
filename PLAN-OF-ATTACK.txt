@@ -7,7 +7,7 @@ ELAN file parsing
 G. (to do) Can get certain levels of a tier.
 
 Video clipping stuff
-4. (to do) Can make a clip of a video from the command line.
+4. (DONE) Can make a clip of a video from the command line.
 5. (to do) A script can insert arbitrary, hard-coded times into this command.
 6. (to do) A script can do this repeatedly from a hard-coded list of times and auto-generated output file names.
 

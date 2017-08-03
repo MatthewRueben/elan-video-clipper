@@ -14,6 +14,7 @@
 
 import sys
 import csv
+import subprocess
 
 
 if __name__ == "__main__":
@@ -56,9 +57,23 @@ if __name__ == "__main__":
     # Print out all the codings that have been selected.
     print '---- Beginning of selected codings ----'
     for coding in codings_by_level:
-        print [coding[i] for i in [0,2,5,-1]]  # this is clunky with python lists
+        print [coding[i] for i in [0,2,8,-1]]  # this is clunky with python lists
     print '---- End of selected codings ----'
 
     # Ask if user wants to make video clips out of these. 
 
+    # Call avconv
+    command = [
+        'avconv',
+        '-i',
+        'test-inputs-video/1.m4v',
+        '-ss',
+        '00:47:42.510',
+        '-t',
+        '00:00:11.390',
+        '-codec',
+        'copy',
+        '00-over.m4v'
+        ]
+    subprocess.call(command)
     
