@@ -8,9 +8,10 @@ G. (to do) Can get certain levels of a tier.
 
 Video clipping stuff
 4. (DONE) Can make a clip of a video from the command line.
-5. (to do) A script can insert arbitrary, hard-coded times into this command.
-6. (to do) A script can do this repeatedly from a hard-coded list of times and auto-generated output file names.
+5. (DONE) A script can insert arbitrary, hard-coded times into this command.
+6. (DONE) A script can do this repeatedly from a hard-coded list of times and auto-generated output file names.
 
 Bringing all the parts together
-7. (to do) Convert start and end times from ELAN to format for commanding the video clipping script.
-8. (to do) It works! 
+7. (DONE) Convert start and end times from ELAN to format for commanding the video clipping script.
+8. (DONE) It works! 
+

@@ -22,17 +22,17 @@ if __name__ == "__main__":
     print '====================================================='
 
     # Check that input file was given as command line argument
-    if len(sys.argv) is not 2:
-        print 'Use: python get_coding_times.py ./path/to/your/file.txt'
-        print 'ERROR: no input file.'
+    if len(sys.argv) is not 3:
+        print 'Use: python get_coding_times.py ./path/to/your/file.txt ./path/to/your/video.{video extension}'
+        print 'ERROR: wrong number of command line arguments.'
         print 'Script over.'
         print 'Goodbye.'
         print ''
         sys.exit()
 
     # Import ELAN codings
-    path = sys.argv[1]  # get path from command-line argument
-    with open(path) as f:
+    path_input_text = sys.argv[1]  # get path from command-line argument
+    with open(path_input_text) as f:
         reader = csv.reader(f, delimiter = '\t')
         codings_all = list(reader)
         
@@ -60,20 +60,32 @@ if __name__ == "__main__":
         print [coding[i] for i in [0,2,8,-1]]  # this is clunky with python lists
     print '---- End of selected codings ----'
 
+
     # Ask if user wants to make video clips out of these. 
+    want_to_make_clips = raw_input('Do you want to make clips out of these codings? (y/n) ')
+    if want_to_make_clips != 'y':
+        print 'OK, I won\'t make you any clips. You have your reward.'
+        print 'Script over.'
+        print 'Goodbye.'
+        print ''
+        sys.exit()
 
     # Call avconv
-    command = [
-        'avconv',
-        '-i',
-        'test-inputs-video/1.m4v',
-        '-ss',
-        '00:47:42.510',
-        '-t',
-        '00:00:11.390',
-        '-codec',
-        'copy',
-        '00-over.m4v'
+    path_input_video = sys.argv[2]
+    for clip_number, coding in enumerate(codings_by_level):
+        clip_number = '00' + str(clip_number); clip_number = clip_number[-3:]  # makes the clip number three digits, left-padded by zeros
+        if level_chosen == '':
+            level_chosen = 'All'
+        path_output_clip = './' + tier_chosen + '.' + level_chosen + '_' + clip_number + '.m4v'
+        command = [
+            'avconv',
+            '-i',
+            path_input_video,
+            '-ss',
+            coding[2],
+            '-t',
+            coding[8],
+            path_output_clip
         ]
-    subprocess.call(command)
+        subprocess.call(command)
     
