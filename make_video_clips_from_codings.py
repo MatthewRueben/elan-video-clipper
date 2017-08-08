@@ -85,7 +85,10 @@ if __name__ == "__main__":
             coding[2],
             '-t',
             coding[8],
+            '-loglevel', 'quiet',
             path_output_clip
         ]
+        print 'Creating video clip at: ', path_output_clip
+        print ' ... please wait --- video gremlins at work ... '
         subprocess.call(command)
     
