@@ -15,3 +15,6 @@ Bringing all the parts together
 7. (DONE) Convert start and end times from ELAN to format for commanding the video clipping script.
 8. (DONE) It works! 
 
+Tweaks
+9. (to do) Automatically get video file extension from the input video.
+

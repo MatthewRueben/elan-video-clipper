@@ -1,16 +1,12 @@
 #!/usr/bin/env python
 
-# OUTLINE:
-# 1. Script can get entry for each coding in a hard-coded tier.
-# 2. Can pull out just the start and end times for each coding.
-# 3. The tier name can now be user-specified.
-# 7. Convert start and end times from ELAN to format for commanding the video clipping script.
-
-# USE FLOW:
+# USE FLOW (paraphrased, not actual wording):
 #  1. "Which tier name?" User> Hug_Type
-#  2. "That tier has XX occurences in this video."
-#  3. "Would you like to make video clips of all of them? (y/n)" User> y
-#  4. "Making videos..." 
+#  2. "That tier has XX occurrences in this video."
+#  3. "Which code for that tier?" User> Guest Over
+#  4. "That tier has XX occurrences for that code."
+#  5. "Would you like to make video clips of all of them? (y/n)" User> y
+#  6. "Making videos..." 
 
 import sys
 import csv
