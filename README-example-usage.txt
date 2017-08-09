@@ -1,7 +1,11 @@
 --------------
 AN EXAMPLE
 --------------
-Here is a full workflow from my (MatthewRueben's) computer; you can see me (1) run the script with inputs called 4.txt and 4.m4v, (2) choose the tier called "Age_Group", (3) choose the "Teenager" level of that tier, and (4) say "y" (yes), I'd like to make clips from the 8 codings listed. 
+Here is a full workflow from my (MatthewRueben's) computer; you can
+see me (1) run the script with inputs called 4.txt and 4.m4v, (2)
+choose the tier called "Age_Group", (3) choose the "Teenager" level of
+that tier, and (4) say "y" (yes), I'd like to make clips from the 8
+codings listed.
 
 
 >>>>>>>> BEGIN: EXAMPLE FROM COMMAND LINE <<<<<<<<<<<<<

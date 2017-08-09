@@ -25,3 +25,7 @@ COMMAND LINE WORKFLOW (paraphrased, not actual wording)
  7. "Making videos..." 
 
 
+--------------
+AN EXAMPLE
+--------------
+See the file README-example-usage.txt for a full workflow from my (MatthewRueben's) command line.
