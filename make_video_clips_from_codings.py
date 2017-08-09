@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
-# USE FLOW (paraphrased, not actual wording):
-#  1. "Which tier name?" User> Hug_Type
-#  2. "That tier has XX occurrences in this video."
-#  3. "Which code for that tier?" User> Guest Over
-#  4. "That tier has XX occurrences for that code."
-#  5. "Would you like to make video clips of all of them? (y/n)" User> y
-#  6. "Making videos..." 
+# COMMAND LINE WORKFLOW (paraphrased, not actual wording):
+# 0. Run the script: python make_video_clips_from_codings.py ./path/to/codings.txt ./path/to/video.m4v
+# 1. "Which tier name?" User> Hug_Type
+# 2. "That tier has XX occurrences in this video."
+# 3. "Which code for that tier? (or hit RETURN to get all codes)" User> Guest Over
+# 4. "That tier has XX occurrences for that code."
+# 5. <lists the codings you've selected>
+# 6. "Would you like to make video clips of these? (y/n)" User> y
+# 7. "Making videos..." 
 
 import sys
 import csv
